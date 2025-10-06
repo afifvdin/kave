@@ -1,0 +1,12 @@
+[package]
+name = "kave"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
+async-channel = "2.5.0"
+evdev = "0.13.1"
+gio = "0.21.1"
+gtk = { version = "0.10.0", package = "gtk4" }
+gtk4-layer-shell = "0.6.3"
+xkbcommon = { version = "0.9.0", features = ["wayland"]}
