@@ -1,12 +1,20 @@
 [package]
 name = "kave"
-version = "0.1.0"
+version = "0.2.0"
 edition = "2024"
+description = "Open source keyboard visualizer"
+repository = "https://github.com/afifvdin/kave"
 
 [dependencies]
-async-channel = "2.5.0"
-evdev = "0.13.1"
-gio = "0.21.1"
-gtk = { version = "0.10.0", package = "gtk4" }
-gtk4-layer-shell = "0.6.3"
-xkbcommon = { version = "0.9.0", features = ["wayland"]}
+serde = { version = "1", features = ["derive"] }
+toml = "1"
+dirs = "7"
+
+[target.'cfg(target_os = "macos")'.dependencies]
+objc2 = "0.6"
+block2 = "0.6"
+objc2-foundation = "0.3"
+objc2-app-kit = "0.3"
+objc2-core-foundation = "0.3"
+objc2-core-graphics = "0.3"
+objc2-quartz-core = "0.3"
