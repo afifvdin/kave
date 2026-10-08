@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" width="1024" height="1024">
+<defs>
+  <linearGradient id="sheen" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#fff" stop-opacity="0.08"/><stop offset="0.6" stop-color="#fff" stop-opacity="0"/></linearGradient>
+  <filter id="shadow" x="-20%" y="-20%" width="140%" height="150%"><feDropShadow dx="0" dy="5.25" stdDeviation="3.75" flood-color="#000" flood-opacity="0.35"/></filter>
+</defs>
+<rect width="256" height="256" fill="#f5e6bf"/>
+<rect x="53.0" y="49.0" width="150.0" height="150.0" rx="30.0" fill="#121214" filter="url(#shadow)"/>
+<rect x="61.25" y="53.5" width="133.5" height="126.0" rx="25.875" fill="#333338"/>
+<rect x="61.25" y="53.5" width="133.5" height="126.0" rx="25.875" fill="url(#sheen)"/>
+<rect x="61.75" y="54.0" width="132.5" height="125.0" rx="25.375" fill="none" stroke="#fff" stroke-opacity="0.10" stroke-width="1"/>
+<g transform="translate(128 144.50) scale(0.03881 -0.03881) translate(-723.5 0)"><path d="M412 0V461L549 630L979 0H1266L714 806L1226 1443H963L427 761H412V1443H181V0Z" fill="#f5f5f7"/></g>
+</svg>

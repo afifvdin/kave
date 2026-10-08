@@ -9,8 +9,9 @@ version=$(sed -n 's/^version = "\(.*\)"/\1/p' Cargo.toml | head -n 1)
 app=target/release/Kave.app
 
 rm -rf "$app"
-mkdir -p "$app/Contents/MacOS"
+mkdir -p "$app/Contents/MacOS" "$app/Contents/Resources"
 cp target/release/kave "$app/Contents/MacOS/kave"
+cp assets/AppIcon.icns "$app/Contents/Resources/AppIcon.icns"
 
 cat > "$app/Contents/Info.plist" <<PLIST
 <?xml version="1.0" encoding="UTF-8"?>
@@ -23,6 +24,8 @@ cat > "$app/Contents/Info.plist" <<PLIST
     <string>Kave</string>
     <key>CFBundleIdentifier</key>
     <string>com.afifvdin.kave</string>
+    <key>CFBundleIconFile</key>
+    <string>AppIcon</string>
     <key>CFBundleExecutable</key>
     <string>kave</string>
     <key>CFBundlePackageType</key>

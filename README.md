@@ -1,3 +1,5 @@
+<img src="assets/icon.png" width="128" alt="kave icon: a dark keycap with a K">
+
 # kave
 
 Open source keyboard visualizer. kave shows the keys you press as a row of
