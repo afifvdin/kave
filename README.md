@@ -30,6 +30,27 @@ Platforms: **macOS** (14 Sonoma or later) for now. Windows and Linux are planned
 the key model, config and display logic are platform-independent, so a new
 platform only needs a backend in `src/platform/`.
 
+## Download
+
+Get `Kave-<version>-arm64.dmg` from the
+[latest release](https://github.com/afifvdin/kave/releases/latest). It needs a
+Mac with Apple Silicon and macOS 14 or later.
+
+1. Open the dmg, drag **Kave** into **Applications**, and open it from there.
+2. kave isn't notarized yet, so macOS blocks it the first time. Click **Done**,
+   then:
+   - **macOS 15 Sequoia and later:** in **System Settings → Privacy &
+     Security**, click **Open Anyway** next to the Kave message, enter your
+     password, then click **Open**.
+   - **macOS 14 Sonoma:** Control-click Kave in Applications, choose **Open**,
+     then click **Open**.
+3. Allow **Input Monitoring** when macOS asks (see [Permission](#permission)),
+   then quit kave and open it again.
+
+The [release notes](https://github.com/afifvdin/kave/releases/latest) have more detail, including a Terminal fallback. On an Intel
+Mac, [build from source](#install) instead; it should work but hasn't been
+tested there yet.
+
 ## Install
 
 You need a [Rust toolchain](https://rustup.rs).
