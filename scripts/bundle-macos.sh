@@ -44,8 +44,9 @@ cat > "$app/Contents/Info.plist" <<PLIST
 </plist>
 PLIST
 
-# An ad-hoc signature gives the app a stable identity, so the Input
-# Monitoring permission survives until the next rebuild.
-codesign --force --sign - "$app"
+# Sign with KAVE_SIGN_IDENTITY, or ad-hoc ("-") when it is unset. A
+# certificate identity keeps the Input Monitoring permission across rebuilds;
+# an ad-hoc signature keeps it only until the next rebuild.
+codesign --force --sign "${KAVE_SIGN_IDENTITY:--}" "$app"
 
 echo "Built $app"
